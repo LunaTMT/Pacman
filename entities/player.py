@@ -45,12 +45,9 @@ class Player(pygame.sprite.Sprite):
         self.dead = False
 
         r, c = start_position
-        self.array_pos = (r, c+1) #Its very akward but we must account for _ in const.grid for the magic tunnel
-        #thus top left position is not actually (1,1) but (1, 2)
-
+        self.array_pos = (r, c+1) 
         self.has_moved_from_default = False
-
-
+        
         self.death_sound = pygame.mixer.Sound("assets/sounds/pacman_death.wav")
         self.chomp_sound = pygame.mixer.Sound("assets/sounds/pacman_chomp.wav")
         self.eat_ghost_sound = pygame.mixer.Sound("assets/sounds/pacman_eatghost.wav")
